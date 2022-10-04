@@ -1,6 +1,6 @@
 
 body {
-	background: #f2f2f2;
+	background: lightblue;
 	overflow: auto;
 }
 
@@ -10,10 +10,17 @@ h1{
 	font-size: 3rem;
 	text-decoration: underline;
 }
+label{
+    margin-left: 2cm;
+}
 
 #AddBtn{
-    width: 20%; 
-    height: 1cm;
+    background-color: bisque;
+    margin: 0;
+    width: 15%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
 }
 ul {
 	text-align: center;
@@ -28,27 +35,30 @@ ul li {
     padding: 12px 8px 12px 40px;
     background: #eee;
     font-size: 18px;
+    display: flex;
+    justify-content: space-between;
 }
 
 input{
+background-color: beige;
   margin: 0;
   border: none;
   border-radius: 0;
-  width: 75%;
+  margin-left: 2cm;
+  width: 70%;
   padding: 10px;
-  float: left;
   font-size: 16px;
 }
-#Behan{
-    padding-right: 3cm;
-    background-color: blue;
-    height: 20px;
-    width: 60px;
+div>#DeleteBtn{
+    background-color: rosybrown;
+    height: 40px;
+    width: 60px; 
 }
-#UpdateBtn{
-    padding-right: 3cm;
-    background-color: red;
-    height: 20px;
+
+
+div>#UpdateBtn{
+    background-color: beige;
+    height: 40px;
     width: 60px; 
 }
 

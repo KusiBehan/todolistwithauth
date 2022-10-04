@@ -1,0 +1,32 @@
+Manuelle Testfälle für die Hauptanwendungsfälle:
+
+Test1:
+
+Task erstellen : In dem Input Feld einen Name für die Task eingeben dann auf Create klicken oder 
+mit enter bestätigen. = funktioniert.
+
+Test2:
+Task im Backend sichtbar: Nachdem erstellen der Task sieht man die Task mit id, title und completed = funktioniert.
+
+Test3:
+Task updaten: Auf der Task das Button Update klicken, dann erscheint ein Feld wo man den Namen ändern kann,
+dort die neue eingabe machen und dann mit enter weiter fahren = funktioniert
+
+Test4:
+Task löschen: Auf der Task das Button delete klicken, dann wird die Task die sie angeklickt haben gelöscht 
+= funktioniert
+
+Manuelle Testfälle für die Zusätzliche Anwendungsfälle:
+
+Test1
+Sich anmelden: Auf der Seite login.html nach der eingabe von irgendeine Email und das Password m294
+soll man auf die todo list ankommen: nicht funktioniert, man wird immer zurück geschickt an der login Seite
+
+Test2
+Als der Benutzer ist es möglich via URL auf Tasks zuzugreifen : funktioniert
+
+Test3
+Email angaben und leeren angaben werden nicht akzeptiert: funktioniert
+
+Test4
+Beim erstellen, löschen, ändern von Task man wird mit einer Meldung im Erfolgsfall informiert: funktioniert

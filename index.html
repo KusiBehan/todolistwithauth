@@ -9,7 +9,8 @@
 </head>
 <body>
     <h1>TodoList</h1>
-    <form onsubmit="return false"><input type="text" id="TaskInput"><button type="submit" id="AddBtn">X</button></form> 
+    <label for="TaskInput">Type your task</label>
+    <form onsubmit="return false"><input required type="text" id="TaskInput"><button type="submit" id="AddBtn">Create</button></form> 
     <ul id="Tasklist">
     </ul>
     <script src="main.js"></script>
