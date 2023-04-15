@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,12 +8,20 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <h1>TodoList</h1>
+   <div id="User"><h3>Behan</h3></div> 
     <label for="TaskInput">Type your task</label>
-    <form onsubmit="return false"><input required type="text" id="TaskInput"><button type="submit" id="AddBtn">Create</button></form> 
+    <form onsubmit="return false"><input required type="text" id="TaskInput"><button type="submit"
+            id="AddBtn">Create</button></form>
     <ul id="Tasklist">
     </ul>
     <script src="main.js"></script>
 </body>
+<script>
+    const usernm = localStorage.getItem('username');
+    document.getElementById("ume").textContent = usernm;
+</script>
+
 </html>

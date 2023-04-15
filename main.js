@@ -1,16 +1,3 @@
-
-// fetch('http://localhost:3000/auth/cookie/tasks',{credentials: 'include'})
-// .then(function (response) {
-//   if (response.status !== 200) {
-//       throw new Error(response.status)
-//   }
-// })
-// .catch(function (error) {
-//   alert(error + " Unauthorized, please log in")
-//   alert("redirecting to login")
-//   window.location.replace("login.html");
-// })
-
 fetch('http://localhost:3000/tasks')
   .then((response) => response.json())
   .then((data) => {
@@ -29,16 +16,13 @@ fetch('http://localhost:3000/tasks')
     buttondiv.appendChild(deletebutton)
     buttondiv.appendChild(updatebutton)
 
-    // listelement.appendChild(deletebutton)
-    // listelement.appendChild(updatebutton)
         listelement.appendChild(buttondiv)
-
-      //Delete With function
+		
+		
     deletebutton.onclick = function(){
         DeleteAndDeleteFetch(element.id)
         location.reload();
     }
-    //Update with function
     updatebutton.onclick = function(){
       let Updatedvalue = prompt('Change your Task')
         UpdateAndUpdateFetch(element.id,Updatedvalue)
@@ -64,13 +48,7 @@ document.querySelector('form').addEventListener("submit", function (event) {
     Mainlist.appendChild(listelem);
 
     let DataString = {title : Task} 
-    // fetch("http://localhost:3000/auth/cookie/tasks",{
-    // method : "POST",
-    // body: JSON.stringify(DataString),
     credentials: "include"
-    // headers: {
-    //     'Content-Type': 'application/json',
-    //   },
     fetch("http://localhost:3000/tasks",{
       method : "POST",
       body: JSON.stringify(DataString),
@@ -87,11 +65,7 @@ location.reload();
 })
 
 function DeleteAndDeleteFetch(id){
-
-    // fetch('http://localhost:3000/auth/cookie/task' + id, {
-    //     method: 'DELETE',
-    //   })
-    fetch('http://127.0.0.1:3000/task/' + id, {
+    fetch('http://127.0.0.1:3000/tasks/' + id, {
       method: 'DELETE',
     })
     .then(res => res.text()) // or res.json()
@@ -104,14 +78,7 @@ function DeleteAndDeleteFetch(id){
 
 
     function UpdateAndUpdateFetch(id,param){
-        let example = {"id":id,"title" : param,"completed":false}
-        // fetch('http://localhost:3000/auth/cookie/tasks', {
-        //     method: 'PUT',
-        //     body: JSON.stringify(example),
-        //     headers: {
-        //       'Content-type': 'application/json; charset=UTF-8',
-        //     },
-        //   })
+        let example = {"id":id,"task" : param,"completed":false}
         fetch('http://localhost:3000/tasks', {
           method: 'PUT',
           body: JSON.stringify(example),
@@ -123,6 +90,8 @@ function DeleteAndDeleteFetch(id){
             .then((json) => console.log(json));
         
     }
+
+
 
 
 

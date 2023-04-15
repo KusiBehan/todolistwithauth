@@ -1,6 +1,6 @@
 
 body {
-	background: lightblue;
+	background: beige;
 	overflow: auto;
 }
 
@@ -14,8 +14,21 @@ label{
     margin-left: 2cm;
 }
 
+#User{
+position: absolute;
+right: 1px;
+width: 300px;
+border: 3px solid #73AD21;
+padding: 10px;
+}
+
+div>h3{
+    text-align:center;
+    margin-right: 2cm;
+    height: 5px;
+}
 #AddBtn{
-    background-color: bisque;
+    background-color: #ff656c;
     margin: 0;
     width: 15%;
     padding: 10px;
@@ -33,14 +46,14 @@ ul li {
     cursor: pointer;
     position: relative;
     padding: 12px 8px 12px 40px;
-    background: #eee;
+    background: #ff656c;
     font-size: 18px;
     display: flex;
     justify-content: space-between;
 }
 
 input{
-background-color: beige;
+background-color: white;
   margin: 0;
   border: none;
   border-radius: 0;
@@ -48,10 +61,12 @@ background-color: beige;
   width: 70%;
   padding: 10px;
   font-size: 16px;
+
 }
 div>#DeleteBtn{
-    background-color: rosybrown;
+    background-color: beige;
     height: 40px;
+    /* border: transparent; */
     width: 60px; 
 }
 
@@ -59,6 +74,9 @@ div>#DeleteBtn{
 div>#UpdateBtn{
     background-color: beige;
     height: 40px;
+    /* border: transparent; */
+    border-left:black;  
+    border-left: 1px;
     width: 60px; 
 }
 

@@ -1,42 +1,26 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const postform = document.getElementById("inputform");
-    const danger =document.getElementById("danger");
+
+let userlist = [];
+fetch('http://localhost:3000/users')
+  .then((response) => response.json())
+  .then((data) => {
+    // console.log(data)
+    data.forEach(element => {
+      userlist.push(element.username);
+    });
+  })
 
 
-    postform.addEventListener("submit" , async (event) => {
-        event.preventDefault();
-        const Password = document.getElementById("Password");
-        const Email = document.getElementById("Email");
+let submitbtn = document.getElementById("subBtn");
+submitbtn.onclick = function () { submitlogin() };
 
-        let putData = {
-            'email': Email.value,
-            'password': Password.value,
-        };
-        if (Password.value === "m294") {
-
-            await fetch('http://localhost:3000/auth/cookie/login', {
-                credentials: 'include',
-                method: 'POST',
-                headers: {
-                     'Content-Type': 'application/json;charset=utf-8'
-                },
-                body: JSON.stringify(putData)
-
-            }).then(function(data){
-                return data.json()
-            }
-            .catch((e) =>{
-              alert(e)
-            }));
-            alert('logged in')
-            window.location.replace("index.html");
-        } else {
-            danger.style.display = "block";
-            event.preventDefault();
-        }
-
-
-    })
-
+function submitlogin() {
+  let username = document.getElementById("username");
+  let password = document.getElementById("password");
+  if (userlist.includes(username.value)) {
+    if (password.value == "1234") {
+      window.location.replace("index.html");
+      window.myvar = username.value;
+      localStorage.setItem('username',username.value)
+    }
+  }
 }
-)
